@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+    int al=sc.nextInt();
+    int se=sc.nextInt();
+    int total=sc.nextInt();
+    int GcdAl = gcd(al,total);
+    int GcdSe = gcd(se,total);
+    if(GcdAl>GcdSe){
+        System.out.println("Alaric unravels the most Mystical Scrolls in the Grand Library!");
+    }
+    else if(GcdSe>GcdAl) {
+       System.out.println("Seraphina unravels the most Mystical Scrolls in the Grand Library!"); 
+    }   
+    else{
+       System.out.println("Alaric unravels the most Mystical Scrolls in the Grand Library!"); 
+    }  
+    }     
+    public static int gcd(int a,int b){
+        if(b==0){
+            return a;
+        }
+        return gcd(b, a % b);
+
+    }
+}
